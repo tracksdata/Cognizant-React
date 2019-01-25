@@ -23,14 +23,7 @@ Soln: => from third-parties , we got module standards & loaders
 // commonJS module standard
 ---------------------------------------------------------------
 
--> by default, every .js file is module
--> by default, all var(s) & functions in .js file are private
--> to abstract/export any member(s), use 'module.exports' object
--> to require/import any module , use 'require()' function
--> group related modules as package with description  file 'package.json'
-
-
-imp-note : Node.js runtime implemented this standard as default module standard.
+imp-note: Node.js runtime implemented this standard as default module standard.
 
 --------------------------------------------------------------
 
