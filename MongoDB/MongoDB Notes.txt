@@ -1,0 +1,29 @@
+MongoDB:
+---------------
+
+Update:
+db.product.update(
+{
+_id:'P001'
+},
+{
+	$set:{ name:'Note Book'	}
+}
+);
+
+User Creation
+--------------
+
+db.createUser(
+   {
+     user: "accountUser",
+     pwd: "password",
+     roles: [ "readWrite", "dbAdmin" ]
+   }
+)
+
+db = connect("localhost:27017/cts",'accountUser','password');
+
+
+
+
