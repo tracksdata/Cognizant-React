@@ -1,0 +1,14 @@
+
+
+--------------------------------------------------
+Node.js ==> JavaScript runtime
+--------------------------------------------------
+
+Node.js uses an event-driven, 
+non-blocking I/O model that makes it lightweight and efficient.
+--------------------------------------------------
+
+==> Blocking IO
+==> Event-Driven Model
+
+--------------------------------------------------

@@ -3,14 +3,15 @@
     "name": "db",
     "connector": "memory"
   },
-  "mongo-db": {
-    "host": "ds131109.mlab.com",
-    "port": 31109,
-    "url": "mongodb://user2:password123@ds131109.mlab.com:31109/cts",
+ 
+  "mongo-local": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "mongodb://praveen:password123@localhost:27017/cts",
     "database": "cts",
     "password": "password123",
-    "name": "mongo-product",
-    "user": "user2",
+    "name": "mongo-local",
+    "user": "praveen",
     "connector": "mongodb"
   }
 }

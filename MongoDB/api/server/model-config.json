@@ -38,5 +38,9 @@
   "Product": {
     "dataSource": "mongo-db",
     "public": true
+  },
+  "product": {
+    "dataSource": "mongo-local",
+    "public": true
   }
 }

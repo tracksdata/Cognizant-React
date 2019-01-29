@@ -26,4 +26,4 @@ db = connect("localhost:27017/cts",'accountUser','password');
 
 
 
-
+mongodb://praveen:password123@localhost:27017/cts
