@@ -4,12 +4,12 @@ const httpServer=http.createServer(); // EventEmiter
 
 httpServer.on('request',(request,response)=>{
     console.log('new request received...');
- //   response.writeHeader(200,{'Content-Type':'text/html'});
+ //   response.writeHead(200,{'Content-Type':'text/html'});
   //  response.write('Hello from Node');
    // response.end();
 //------------------------
 /*fs.readFile('./js.pdf',(err,data)=>{
-    response.writeHeader(200,{'Content-Type':'application/pdf'});
+    response.writeHead(200,{'Content-Type':'application/pdf'});
     response.write(data);
     response.end();
 })
@@ -18,7 +18,9 @@ console.log('--- Showing PDF');*/
 const readStream=fs.createReadStream('./video1.mp4');
 
 response.writeHeade(200,{'Content-Type':'video/mp4'});
+response
 readStream.on('data',(chunk)=>{
+
     console.log('--- streaming started...')
     response.write(chunk);
     
