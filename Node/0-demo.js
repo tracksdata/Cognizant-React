@@ -17,7 +17,7 @@ console.log('--- Showing PDF');*/
 
 const readStream=fs.createReadStream('./video1.mp4');
 
-response.writeHeader(200,{'Content-Type':'video/mp4'});
+response.writeHeade(200,{'Content-Type':'video/mp4'});
 readStream.on('data',(chunk)=>{
     console.log('--- streaming started...')
     response.write(chunk);
