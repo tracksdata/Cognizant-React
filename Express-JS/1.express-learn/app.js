@@ -136,7 +136,41 @@ const fs=require('fs');
  
     */
 
-   app.use(express.static('public'));
+    //Connection Info
+const bodyParser = require('body-parser')
+
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true });
+const product = mongoose.model('product', { _id: String,name:String,price: Number });
+
+app.get("/test",(req,resp)=>{
+    console.log("--- test");
+    
+})
+
+app.post("/test",bodyParser.json(),(req,resp)=>{
+    let prod=new product({'_id':req.body.id,'name':req.body.name,'price':req.body.price});
+    console.log('Product: '+prod);
+    console.log("--- post test "+req.body.name);
+
+    prod.save((err, data) => {
+        if(err){
+            console.log('--Error: '+err);  
+        }
+        console.log('Server Data: '+data);
+        resp.send(data)
+    });
+    
+})
+
+
+
+
+
+
+
+
+   app.use("/",express.static('public'));
 
    app.use('/users',(req,resp,next)=>{
     console.log('---- Validation ')
