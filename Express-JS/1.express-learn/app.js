@@ -148,6 +148,12 @@ app.get("/test",(req,resp)=>{
     
 })
 
+app.put('/updateProduct',bodyParser.json,(req,resp)=>{
+    let prod=new product({'_id':req.body.id,'name':req.body.name,'price':req.body.price});
+    
+
+})
+
 app.post("/test",bodyParser.json(),(req,resp)=>{
     let prod=new product({'_id':req.body.id,'name':req.body.name,'price':req.body.price});
     console.log('Product: '+prod);

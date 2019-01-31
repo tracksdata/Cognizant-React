@@ -1,0 +1,30 @@
+
+
+REST
+-------
+
+    resources
+
+    - product
+    - review
+
+    A. Resource identification in requests
+
+    /api/products
+    /api/products/{id}
+    /api/products/{id}/reviews
+    /api/products/{id}/reviews/{id}
+
+
+    B.Resource manipulation through representations
+
+
+    html | xml | json 
+
+    C. Self-descriptive messages
+
+    headers : Accept,..
+
+
+    
+    
