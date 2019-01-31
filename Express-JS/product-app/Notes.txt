@@ -1,4 +1,17 @@
+Web - Services - SOA
+-----------------
+1. SOAP
+    -> JAVA
+            -> JAX-WS
+                    -> JERSY
+                    -> XXXXX
+            -> JAX -RS
+                    -> REST EASY
+    -> SPRIING
+            -> SPRING REST
+            -> SPRING SOAP
 
+2. REST
 
 REST
 -------
