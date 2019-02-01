@@ -2,15 +2,15 @@
 
   <div>
    
-      <div>
-          <button class='btn btn-primary'>+</button>
+        <div>
+          <button class='btn btn-primary' (click)='toggle()'>+</button>
         </div>
-        <div class='card text-center'>
+
+
+        <div class='card text-center' *ngIf="show">
             <div class='card-header bg-primary'>
               Counter APP
             </div>
-      
-           
       
             <div class='card-body'>
               <app-counter btnLabel='+10' (totalCount)='getTotal(10)' ></app-counter>
@@ -19,19 +19,11 @@
               <app-counter btnLabel='-10' (totalCount)='getTotal(-10)' ></app-counter>
             </div>
       
-            <div class='card-footer text-center bg-primary'>
-                Total Count: {{total}}
+            <div class='card-footer text-center warning'>
+                Total Count: <span class='badge badge-danger'>{{total}}</span>
             </div>
       
           </div>
-      
-      
-      
         </div>
-
-
-
-
-
 
 </div>

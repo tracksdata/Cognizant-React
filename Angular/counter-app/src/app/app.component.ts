@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
  total=0;
+ show=false;
+
+ toggle(){
+   this.show=!this.show;
+ }
  getTotal(count){
    console.log(this.total);
     this.total=this.total+count;
