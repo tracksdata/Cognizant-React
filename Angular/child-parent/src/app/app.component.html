@@ -1,0 +1,12 @@
+<div class='container mt-3'>
+<div class='alert bg-primary text-center'>
+    <h1>App Component</h1>
+    <button class='btn btn-info' (click)='process()'>Greet</button>
+
+    <h2>{{outMsg}}</h2>
+</div>
+
+<app-greet [inputMsg]=greetMsg (outputMsg)="display($event)" ></app-greet>
+<app-employee [empInput]=greetMsg></app-employee>
+
+</div>

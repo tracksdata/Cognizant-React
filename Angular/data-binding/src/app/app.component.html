@@ -1,0 +1,124 @@
+<div class='container mt-3'>
+
+  <div class='alert bg-info'>
+    <h1>APP Component</h1>
+
+    <div>City: {{city}}</div>
+    <div>
+      {{cities}}
+    </div>
+
+    
+    <hr/>
+
+
+    <div class='alert bg-warning'>
+
+      <form>
+        <div>
+          <label for="">Product Id</label>
+          <input type="text" name="pid" [(ngModel)]=product.pid class='form-control'/>
+        </div>
+
+        <div>
+            <label for="">Product Name</label>
+            <input type="text" name="pname" [(ngModel)]=product.pname class='form-control'/>
+        </div>
+
+        <div>
+            <label for="">Price</label>
+            <input type="text" name="price" [(ngModel)]=product.price class='form-control'/>
+        </div>
+
+        <div>
+          <button class='btn btn-primary' (click)='handleForm()'>Submit</button>
+        </div>
+      </form>
+
+    </div>
+
+
+
+    <hr/>
+
+ <button class='btn btn-primary'(click)='process()' >Click</button>
+ <hr/>
+ <h2>STATUS: {{status}}</h2>
+ <input type="checkbox" (change)='showData($event)'>
+ <div [hidden]='status'>
+  <h1>Hello</h1>
+ </div>  
+ <hr/>
+ <h2>Pname: {{pname}}</h2>
+ <h2>S1: {{s1.value}}</h2>
+ <input [(ngModel)]=pname #s1 name='bla' type="text">
+ <hr/>
+
+ <select name="cityName">
+   <option *ngFor="let cityName of cities">{{cityName}}</option>
+ </select>
+<hr/>
+ 
+<span *ngFor="let cityName of cities">
+  {{cityName}} <input name="myCity" type="radio" value="{{cityName}}">
+</span>
+
+<hr/>
+<span *ngFor="let cityName of cities">
+    {{cityName}} <input name="myCity" type="checkbox" value="{{cityName}}">
+</span>
+
+ <div>
+<img [src]='imageUrl' height='200' width='200'>
+ </div> 
+<hr/>
+<ol>
+  <li *ngFor="let cityName of cities">{{cityName}}</li>
+</ol>
+
+<hr/>
+    
+    <div>
+
+      <hr/>
+      <table class='table table-dark'>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>City</th>
+        </tr>
+
+        <tr>
+          <td>{{emp.name}}</td>
+          <td>{{emp.age}}</td>
+          <td>{{emp.location}}</td>
+        </tr>
+      </table>
+    </div>
+    <hr/><hr/>
+
+    <div>
+        <table class='table table-dark'>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>City</th>
+            </tr>
+
+            <tr *ngFor="let employee of emps">
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.age}}</td>
+                    <td>{{employee.location}}</td>
+            </tr>
+        </table>
+      </div>
+
+
+  </div>
+
+
+
+
+
+
+</div>
