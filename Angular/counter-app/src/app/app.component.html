@@ -1,0 +1,37 @@
+<div class='container mt-3'>
+
+  <div>
+   
+      <div>
+          <button class='btn btn-primary'>+</button>
+        </div>
+        <div class='card text-center'>
+            <div class='card-header bg-primary'>
+              Counter APP
+            </div>
+      
+           
+      
+            <div class='card-body'>
+              <app-counter btnLabel='+10' (totalCount)='getTotal(10)' ></app-counter>
+              <app-counter btnLabel='+20' (totalCount)='getTotal(20)' ></app-counter>
+              <app-counter btnLabel='-5' (totalCount)='getTotal(-5)' ></app-counter>
+              <app-counter btnLabel='-10' (totalCount)='getTotal(-10)' ></app-counter>
+            </div>
+      
+            <div class='card-footer text-center bg-primary'>
+                Total Count: {{total}}
+            </div>
+      
+          </div>
+      
+      
+      
+        </div>
+
+
+
+
+
+
+</div>
