@@ -1,0 +1,16 @@
+<div class='container mt-3'>
+    <div class='alert bg-info text-center'>
+        APP Component  : {{totalHits}}
+      </div>
+
+      <div class='alert bg-warning text-center'>
+          <app-counter [btnLabel]='labelData' (totalCount)='disp($event)'></app-counter>
+          <app-counter btnLabel='Kick' (totalCount)='disp($event)'></app-counter>
+          <app-counter btnLabel='Slap' (totalCount)='disp($event)'></app-counter>
+          <app-counter btnLabel='Push' (totalCount)='disp($event)'></app-counter>
+        
+        </div>
+
+</div>
+
+
