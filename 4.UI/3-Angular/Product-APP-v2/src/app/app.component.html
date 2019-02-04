@@ -1,0 +1,13 @@
+<div class='container mt-3' >
+ 
+  <div class='alert bg-info'>
+    Product APP
+  </div>
+  <hr/>
+  <hr/>
+
+  <div *ngFor="let product of products" class='list-group-item'>
+      <app-product [value]="product"></app-product>
+  </div>
+
+</div>
