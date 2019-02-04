@@ -29,6 +29,7 @@
       <div *ngIf="isTabSelected(3)">
         <div *ngFor="let review of reviews">
             <app-review [value]='review'></app-review>
+            <app-review-form  [value]='review' (submitedReview)="addReview($event)"></app-review-form>
         </div>
        
       </div>

@@ -1,5 +1,5 @@
+import { ProductService } from './../product.service';
 import { Component, OnInit, Input } from '@angular/core';
-
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -7,22 +7,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-
   @Input('value')
   product:any;
 
   reviews:any=[
-    {
-      stars:5,
-      author:'abc@abc.com',
-      body:'Good Product'
-    },
-    {
-      stars:4,
-      author:'xyz@abc.com',
-      body:'Bad Product'
-    }
+  {stars:5,author:'abc@abc.com',body:'Good Product'},
+  {stars:2,author:'xyz@abc.com',body:'Bad Product'},
   ];
+  constructor(private ps:ProductService) { }
+  addReview(newReview){
+    //console.log('parent');
+    //console.log(newReview);
+    this.reviews.push(newReview);
+    
+  }
 
   currentTab:number=1;
   isTagSelected:boolean=false;
@@ -37,7 +35,7 @@ export class ProductComponent implements OnInit {
 
 
 
-  constructor() { }
+ 
 
 
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductService } from './product.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  constructor(private ps:ProductService){}
   products: Array<any> = [
     {
       id: 'P001',
@@ -24,6 +27,16 @@ export class AppComponent {
       canBuy: false
     }
   ]
+
+  prods:any[];
+  listAll(){
+    this.ps.listAll().subscribe(data=>this.prods=data);
+  }
+  saveProduct(product){
+    this.saveProduct(product);
+  }
+
+
 
   
 }
