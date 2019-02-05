@@ -1,0 +1,38 @@
+<div class='card'>
+  <div class='card-header'>Products</div>
+  <div class='card-body'>
+    <div class='table table-sm'>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+      </tr>
+      <tr *ngFor="let product of products">
+        <td> <a (click)="display(product)">{{product.id}}</a></td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.description}}</td>
+      </tr>
+
+    </div>
+
+    <div class='card-footer' *ngIf="product">
+
+      <div class='table table-sm'>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td> {{product.id}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.description}}</td>
+        </tr>
+
+      </div>
+
+    </div>
