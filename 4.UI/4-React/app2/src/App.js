@@ -3,11 +3,20 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+name='praveen';
   render() {
     return (
-      <h1>Welcome</h1>
+     <div>
+       <Test/>
+     </div>
+     
     );
   }
 }
+
+function test(){
+
+}
+
 
 export default App;

@@ -1,2 +1,9 @@
 React JS Notes
 --------------------
+
+=> Components
+        => single responsible entitity
+=> props
+        => parent to child
+=> state
+        => holds data / model

@@ -31,4 +31,4 @@ function reactTick(){
 }
 setInterval(reactTick,1000) */
 let myroot=document.querySelector("#root");
-//ReactDom.render(App,myroot);
+ReactDom.render(<App/>,myroot);
