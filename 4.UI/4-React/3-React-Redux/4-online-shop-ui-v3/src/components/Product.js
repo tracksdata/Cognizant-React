@@ -37,18 +37,17 @@ class Product extends Component {
     }
     componentDidUpdate() {
         let { cartLine } = this.props
-        this.refs.qty.value = cartLine.qty || "";
+       this.refs.qty.value = cartLine.qty || "";
     }
     renderBuyBtn(product) {
-        if (product.canBuy)
+       // if (product.canBuy)
             return (
                 <div>
-                    <button onClick={e => this.handleBuy()} className="btn btn-sm btn-primary">buy</button>
+                    <button onClick={e => this.handleBuy()} className="btn btn-sm btn-primary" ref="qty" value="1">buy</button>
                     &nbsp;
-                        <input style={{ width: '50px' }} type="text" ref="qty" />
                 </div>
             )
-        else return null;
+        //else return null;
     }
     renderReviews() {
         let { reviews } = this.props;
@@ -100,6 +99,7 @@ class Product extends Component {
                     <div className="col-9 col-sm-9 col-md-9">
                         <h5>{item.name}</h5>
                         <h6>&#8377;{item.price}</h6>
+                        <hr/>
                         {this.renderBuyBtn(item)}
                         <ul className="nav nav-tabs">
                             <li className="nav-item">

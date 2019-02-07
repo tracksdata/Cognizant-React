@@ -1,7 +1,7 @@
 
 import axios from 'axios'
 
-const apiURl = "http://localhost:8080/api/products";
+const apiURl = "http://localhost:3000/api/products";
 
 const Api = {
     addToCart(item, qty) {
