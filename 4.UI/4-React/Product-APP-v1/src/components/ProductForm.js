@@ -12,7 +12,7 @@ class ProductForm extends Component {
 
         let {onFormSubmit}=this.props;
         if(onFormSubmit){
-            onFormSubmit(newProduct);
+            onFormSubmit(newProduct,"Praveen");
         }
 
     }

@@ -10,7 +10,6 @@ class App extends Component {
 
     return (
       <div className="container">
-
         <div className="card">
           <div className="card-header bg-primary">Product APP</div>
           <div className="card-body">
