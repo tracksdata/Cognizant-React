@@ -1,0 +1,34 @@
+
+Unit-Testing
+-----------------
+  AAA
+  A -> Arrange 
+  A -> Act
+  A -> Assert
+------------------------------------
+  TDD  or BDD 
+------------------------------------  
+
+Unit-Testing F.ws
+-----------------
+
+    ==> jasmine
+    ==> mocha
+    ==> jest  
+    ==> Ava
+    .....
+
+
+Test-Runners
+
+   ==> Karma
+
+   
+
+
+
+ Test Utilities 
+---------------------
+
+        - React-Test-Utlities
+        - Enzyme lib  from airbnb
